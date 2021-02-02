@@ -1,17 +1,11 @@
 name: JD_Sign_Action
 
 on:
-  repository_dispatch:
-  release:
-    types: published
-  # push:
-  #   branches:
-  #     - master
   schedule:
-    - cron: 0 20 * * *
+    - cron: 0 15 * * *
   watch:
     types: started
-    
+
 env:
   JD_COOKIE: ${{ secrets.JD_COOKIE }}
   JD_DUAL_COOKIE: ${{ secrets.JD_DUAL_COOKIE }}
